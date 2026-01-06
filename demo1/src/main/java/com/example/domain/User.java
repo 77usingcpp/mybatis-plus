@@ -1,10 +1,15 @@
 package com.example.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
+import java.time.LocalDateTime;
+
+@TableName("user")
 public class User {
     private Integer user_id;
     private String username;
     private String password;
-    private String create_at;
+    private LocalDateTime create_at;
 
     @Override
     public String toString() {
@@ -40,11 +45,11 @@ public class User {
         this.password = password;
     }
 
-    public String getCreate_at() {
+    public LocalDateTime getCreate_at() {
         return create_at;
     }
 
-    public void setCreate_at(String create_at) {
+    public void setCreate_at(LocalDateTime create_at) {
         this.create_at = create_at;
     }
 }
